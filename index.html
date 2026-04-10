@@ -1,11 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/Eventify/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Eventify-Event Management Platform</title>
-    <meta name="description" content="Discover and manage your amazing events near you with Eventify" />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Eventify</title>
+
+    <!-- GitHub Pages SPA redirect decoder -->
+    <script>
+      (function() {
+        var p = window.location.search.slice(1);
+        if (p) {
+          history.replaceState(
+            null, null,
+            window.location.pathname.split('?')[0] +
+            decodeURIComponent(p).replace(/~and~/g, '&') +
+            window.location.hash
+          );
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
