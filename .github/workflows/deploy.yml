@@ -32,9 +32,6 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          # Add your Stripe publishable key here (safe to expose)
-          VITE_STRIPE_PUBLISHABLE_KEY: ${{ secrets.VITE_STRIPE_PUBLISHABLE_KEY }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
