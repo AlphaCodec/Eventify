@@ -7,6 +7,7 @@ import { useBooking } from '../context/BookingContext';
 import Swal from 'sweetalert2';
 import { motion } from 'framer-motion';
 import PaymentModal from '../components/PaymentModal';
+import ReviewSection from '../components/ReviewSection';
 
 const swalConfig = { background: '#1e1e2e', color: '#f0f0fa', confirmButtonColor: '#7c5cfc' };
 
@@ -193,16 +194,8 @@ function EventDetails() {
               </div>
             )}
 
-            {/* Rating placeholder */}
-            <div style={{ marginTop: 32, background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 14, padding: '20px 22px', display: 'flex', alignItems: 'center', gap: 20 }}>
-              <div style={{ display: 'flex', gap: 2 }}>
-                {[...Array(5)].map((_, i) => <Star key={i} size={18} fill="#f5a623" color="#f5a623" />)}
-              </div>
-              <div>
-                <span style={{ fontSize: 18, fontWeight: 800, color: 'white', fontFamily: 'Syne, sans-serif' }}>4.8</span>
-                <span style={{ fontSize: 13, color: 'var(--text-muted)', marginLeft: 8 }}>based on 234 reviews</span>
-              </div>
-            </div>
+            {/* Review Section — attendance-gated, API-backed */}
+            <ReviewSection eventId={event._id} user={user} />
           </div>
 
           {/* Right: Booking sidebar */}
