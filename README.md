@@ -425,7 +425,3 @@ Confirm the storage buckets exist (Dashboard → **Storage**) and that their RLS
 Ensure their `profiles.role` is set to `'admin'` in the database. The column defaults to `'user'` for all new sign-ups.
 
 ---
-
-## License
-
-MIT — free for personal and commercial use.
